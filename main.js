@@ -8,6 +8,8 @@ const input = document.querySelector('#prompt input');
 
 prompt.addEventListener('submit', handleSubmit);
 
+printMessage('Enter your name');
+
 input.focus();
 
 function handleSubmit(event) {
@@ -16,4 +18,12 @@ function handleSubmit(event) {
     console.log(input.value);
 
     input.value = '';
+}
+
+function printMessage(message) {
+    let li = document.createElement('li');
+
+    li.textContent = message;
+
+    output.appendChild(li);
 }
